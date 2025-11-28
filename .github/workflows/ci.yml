@@ -17,19 +17,16 @@ jobs:
       - name: Node.js kur
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Bağımlılıkları yükle
         run: npm install
 
+      - name: Prisma binary'e izin ver
+        run: chmod +x node_modules/.bin/prisma
+
       - name: Prisma client üret
         run: npx prisma generate --schema=./prisma/schema.prisma
 
-
-
       - name: Testleri çalıştır
         run: npm test
-
-      - name: Prisma binary'e izin ver
-        run: chmod +x node_modules/.bin/prisma
-  
