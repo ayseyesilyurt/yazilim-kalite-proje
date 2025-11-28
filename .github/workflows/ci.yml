@@ -26,5 +26,10 @@ jobs:
         run: npx prisma generate --schema=./prisma/schema.prisma
 
 
+
       - name: Testleri çalıştır
         run: npm test
+
+      - name: Prisma binary'e izin ver
+        run: chmod +x node_modules/.bin/prisma
+  
