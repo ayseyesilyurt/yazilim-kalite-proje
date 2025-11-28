@@ -23,7 +23,8 @@ jobs:
         run: npm install
 
       - name: Prisma client üret
-        run: npm run prisma:generate
+        run: npx prisma generate
+
 
       - name: Testleri çalıştır
         run: npm test
