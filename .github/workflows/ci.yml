@@ -25,6 +25,9 @@ jobs:
       - name: Prisma binary'e izin ver
         run: chmod +x node_modules/.bin/prisma
 
+      - name: Jest binary'e izin ver
+        run: chmod +x node_modules/.bin/jest
+
       - name: Prisma client üret
         run: npx prisma generate --schema=./prisma/schema.prisma
 
